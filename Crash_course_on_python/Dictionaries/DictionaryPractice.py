@@ -24,3 +24,43 @@ print(file_counts)
 del file_counts["html"]
 print(file_counts)
 
+# Iterating through the dictionary using a for loop:
+for extension in file_counts:
+    print(extension)
+
+# Using a comprehension to iterate over the dictionary:
+extension_list = [print(extension) for extension in file_counts]
+
+# Using items method to return value:
+for ext, amount in file_counts.items():
+    """First element is key (ie:ext)
+    second element is value (ie:amount)"""
+    print("There are {} files with the .{} extension".format(amount, extension))
+
+# Use built in methods to access keys or values:
+print(file_counts.keys())
+for keys in file_counts.keys():
+    print(keys)
+
+print(file_counts.values())
+for values in file_counts.values():
+    print(values)
+
+
+def count_letters(text):
+    """Initialize an empty dictionary"""
+    result = {}
+    """If letter is not in dictionary
+    initialize an entry in dictionary 
+    with a value of 0"""
+    for letter in text:
+        if letter not in result:
+            result[letter] = 0
+            """Increment the count for
+            that letter in the dictionary"""
+    result[letter] += 1
+    return result
+
+
+print(count_letters("ssssssssss"))
+print(count_letters("Grant Knoetze"))
