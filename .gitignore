@@ -7,6 +7,8 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+.idea
+*.idea
 .Python
 build/
 develop-eggs/
@@ -18,7 +20,7 @@ lib/
 lib64/
 parts/
 sdist/
-var/
+var/s
 wheels/
 pip-wheel-metadata/
 share/python-wheels/
