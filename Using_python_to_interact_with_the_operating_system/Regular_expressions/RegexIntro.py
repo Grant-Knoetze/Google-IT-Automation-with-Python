@@ -7,9 +7,15 @@ log = "July 31st 07:51:48 my_computer bad_process[12345]: ERROR Performing packa
 index = log.index("[")
 print(log[index + 1:index + 6])
 
-result = re.search(r"a", "July 31st 07:51:48 my_computer bad_process[12345]: ERROR Performing package upgrade")
-""" r is for raw string,
- always use for regex in python."""
+result = re.search(r"a", "July 31st 07:51:48 my_computer bad_process[12345]: ERROR Performing package upgrade") # (
+# pattern, string, flags=0) <-- This from Python docs.s
+""" r is for raw string, always use for regex in python.
+Scan through string looking
+for the first location where where the regex
+pattern produces a match, and return a corresponding "match
+object", return  None if no position in the string matches 
+the pattern. """
+
 print(result)
 
 result2 = re.search(r"aza", "plaza")
@@ -33,3 +39,14 @@ print(re.search(r"[Pp]ython", "Python"))
 
 print(re.search(r"[a-z]way", "The end of the highway"))
 
+# Character classes.
+# Inside []
+
+print(re.search(r"[Pp]ython", "Python")) # Allow for lower and upper case Pp"
+
+# a-z can state any lower case letter.
+print(re.search(r"[a-z]way", "The end of the highway"))
+print(re.search(r"[a-z]way", "What a way to go?"))
+"""way is preceded by a space and 
+does not match the range we specified a-z 
+therefore it returns None. """
