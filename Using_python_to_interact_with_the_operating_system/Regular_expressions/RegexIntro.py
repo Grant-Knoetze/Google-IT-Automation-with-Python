@@ -80,19 +80,18 @@ print(re.search(r"p?each", "To each their own"))
 
 print(re.search(r"p?each", "I like peaches"))
 
-
 print(re.search(r"Py.*n", "Python Programming"))  # * Takes as many chars as possible, ie: greedy...
 
 # Use character class to match letters only...
 print(re.search(r"Py[a-z]*n", "Python Programming"))  # * Takes as many chars as possible, ie: greedy...
 
 # Escaping characters...
-print(re.search(r"\.com", "Welcome")) # Use backslash to escape the .
+print(re.search(r"\.com", "Welcome"))  # Use backslash to escape the .
 
 print(re.search(r"^A.*a$", "Argentina"))
 print(re.search(r"^A.*a$", "Azerbaijan"))
 
-pattern = r"^[a-zA-Z_]*$" # We store the pattern we want to match as a variable...
+pattern = r"^[a-zA-Z_]*$"  # We store the pattern we want to match as a variable...
 print(re.search(pattern, "_this_is_a_valid_variable_name_in_python"))
 print(re.search(r"p.ng", "Pangea", re.IGNORECASE))
 
@@ -108,3 +107,20 @@ print(re.search(r"cloud[a-zA-Z0-9]", "cloud9"))
 
 print(re.search(r"[^A-Za-z ]", "This is a string with spaces."))
 
+print(re.search(r"cat|dog", "I have a cat named Jax"))
+
+print(re.findall(r"cat|dog", "I have a cat and a dog"))
+
+# Repeated matches...
+
+print(re.search(r"Py.*n", "Pygmalion"))
+
+print(re.search(r"Py.*n", "Python programming"))
+
+# Only letters...
+
+print(re.search(r"Py[a-z]*n", "Python programming"))
+
+print(re.search(r".*", "The dog jumped over the fence!"))
+
+print(re.search(r"a+t+", "The atlantic ocean is vast."))
