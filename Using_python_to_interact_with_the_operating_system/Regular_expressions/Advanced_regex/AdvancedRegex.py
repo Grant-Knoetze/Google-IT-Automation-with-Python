@@ -26,3 +26,7 @@ print(extract_pid(log))
 # Splitting and replacing:
 
 print(re.split(r"[.!?]", "One sentence. Two. Three sentences."))
+
+# Capture in parentheses to include the characters...
+
+print(re.split(r"([.!?])", "One sentence. Two. Three sentences."))
