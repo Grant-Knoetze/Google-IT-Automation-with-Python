@@ -6,7 +6,19 @@ import re
 
 log = "July 31 07:51:48 my_computer bad_process[12345]: ERROR Performing package upgrade"
 regex = r"\[(\d+)\]"
-result = re.search(regex, log)
-print(result[1])
+results = re.search(regex, log)
+print(results[1])
 
 
+def extract_pid(log_line):
+    """Define a function
+    that extracts the PID
+    if possible"""
+    regex_new = r"\[(\d+)\]"
+    result = re.search(regex_new, log_line)
+    if result is None:
+        return ""
+    return result[1]
+
+
+print(extract_pid(log))
