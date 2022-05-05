@@ -14,11 +14,15 @@ def extract_pid(log_line):
     """Define a function
     that extracts the PID
     if possible"""
-    regex_new = r"\[(\d+)\]"
+    regex_new = r"\[(\d+)\]: ([A-Z]*)"
     result = re.search(regex_new, log_line)
     if result is None:
-        return ""
-    return result[1]
+        return None
+    return"{} ({})".format(result[1], result[2])
 
 
 print(extract_pid(log))
+
+# Splitting and replacing:
+
+print(re.split(r"[.!?]", "One sentence. Two. Three sentences."))
