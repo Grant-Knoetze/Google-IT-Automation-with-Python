@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 
 def to_seconds(hours, minutes, seconds):
+    """User provides the
+    input for hours, minutes,
+    seconds,
+    user prompted for
+    another conversion."""
     return hours * 3600 + minutes * 60 + seconds
 
 
