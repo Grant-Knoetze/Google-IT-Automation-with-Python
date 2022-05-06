@@ -18,7 +18,7 @@ def extract_pid(log_line):
     result = re.search(regex_new, log_line)
     if result is None:
         return None
-    return"{} ({})".format(result[1], result[2])
+    return"{} ({})".format(result[1], result[2]) 
 
 
 print(extract_pid(log))
