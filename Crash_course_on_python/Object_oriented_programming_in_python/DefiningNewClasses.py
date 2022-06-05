@@ -16,4 +16,15 @@ class Apple:
     color = " "
     flavor = " "
 
-    
+
+# To create a new instance
+# of any class, we call the
+# name of the class as if it
+# were a function.
+jonagold = Apple()  # Create a new instance of Apple class, and assign it to variable jonagold.
+# Now set the values of the attributes.
+jonagold.color = "red"
+jonagold.flavor = "sweet"
+# Use print to check if the assignments were successful.
+print(jonagold.color)
+print(jonagold.flavor)
