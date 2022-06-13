@@ -23,3 +23,26 @@ hamlet.speak()
 jeronimo = Piglet()
 jeronimo.speak()
 jeronimo.squeal()
+
+
+class Kitten:
+    name = "Kitty"  # Instance variable.
+    years = 0
+
+    def cat_years(self):
+        return self.years * 15
+
+    def meow(self):
+        print("Meow! I'm {}! Meow!".format(self.name))
+
+
+misha = Kitten()
+misha.name = "Misha"
+misha.meow()
+
+prince = Kitten()
+prince.name = "Prince"
+prince.meow()
+prince.years = 2
+print(prince.cat_years())
+
