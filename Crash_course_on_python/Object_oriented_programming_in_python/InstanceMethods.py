@@ -8,10 +8,18 @@
 class Piglet:
     """Objects need methods to
     perform actions, lets give hamlet a voice."""
+
     def speak(self):
         print("oink oink")
+
+    def squeal(self):
+        print("shriek! shriek!")
 
 
 hamlet = Piglet()
 # We call the speak method on Hamlet.
 hamlet.speak()
+
+jeronimo = Piglet()
+jeronimo.speak()
+jeronimo.squeal()
