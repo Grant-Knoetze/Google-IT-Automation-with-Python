@@ -9,3 +9,5 @@ print(dir({}))
 
 # Use help to get information on how to use the methods...
 print(help({}))
+
+print(dir(""))
