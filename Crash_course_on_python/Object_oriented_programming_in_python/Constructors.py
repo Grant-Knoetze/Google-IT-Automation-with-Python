@@ -6,9 +6,9 @@ class Apple:
     name of the class is called, it
     is always named __init__,
     after which we define a
-    string method to return a
-    given instances attributes
-    in a string format."""
+    string method to return an
+    instance's attributes
+    in string format."""
 
     def __init__(self, color, flavor):
         self.color = color
