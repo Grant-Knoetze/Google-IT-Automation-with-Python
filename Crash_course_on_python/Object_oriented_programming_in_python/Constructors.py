@@ -27,3 +27,5 @@ print(granny_smith.color)
 print(granny_smith.flavor)
 
 print(jonagold)
+
+help(Apple)
