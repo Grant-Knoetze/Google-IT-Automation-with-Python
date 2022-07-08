@@ -25,8 +25,14 @@ class Piglet(Animal):
     scream = "Freedom for captive pigs!"
 
 
+class Cow(Animal):
+    sound = "Free all cows!"
+
+
 # Create an instance of the Piglet class and call the speak method on it:
 hamlet = Piglet("Hamlet")
 hamlet.speak()
 jeronimo = Piglet("Jeronimo")
 jeronimo.speak()
+milky = Cow("Milky")
+milky.speak()
