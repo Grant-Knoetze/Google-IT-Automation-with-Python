@@ -1,6 +1,6 @@
 
 * IT Automation using Python 3
-* Interesting modules and libraries
-* Including working with files, regular expressions, matching, automation.
+* This repository contains scripts that I have written whilst progressing with
+  the "Google IT Automation with Python Professional Certificate."
 
 
