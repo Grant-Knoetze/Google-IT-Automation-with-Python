@@ -10,5 +10,13 @@ class TestRearrange(unittest.TestCase):
         expected = "Grant Dude"
         self.assertEqual(rearrange_name(testcase), expected)
 
+# Add an edge case.
+    def test_empty_string(self):
+        """This edge case tests what will happen when an
+        empty string is passed into the function as a testcase"""
+        testcase = ""
+        expected = ""
+        self.assertEqual(rearrange_name(testcase), expected)
+
 
 unittest.main()
