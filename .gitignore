@@ -1,3 +1,4 @@
+# Miscallaneous
 .xml
 .iml
 .bin
@@ -131,4 +132,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Idea
+.idea/
 

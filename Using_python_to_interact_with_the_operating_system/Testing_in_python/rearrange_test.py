@@ -18,5 +18,22 @@ class TestRearrange(unittest.TestCase):
         expected = ""
         self.assertEqual(rearrange_name(testcase), expected)
 
+# Additional cases.
+    def test_double_name(self):
+        """Tests if someone with more than one given name still gets their name
+        rearranged."""
+        testcase = "Knoetze, Grant A."
+        expected = "Grant A. Knoetze"
+        self.assertEqual(rearrange_name(testcase), expected)
+
+    def test_single_name(self):
+        """Tests what will happen if someone with a single name
+        is present"""
+        testcase = "Grant"
+        expected = "Grant"
+        self.assertEqual(rearrange_name(testcase), expected)
+
+
+
 
 
