@@ -13,11 +13,15 @@ def main():
     my_new_dict = {n: n ** 2 for n in my_numbers2}
     print(my_new_dict)
 
-    # Add a conditonal
+    # Add a conditional
 
     my_numbers2 = [233, 255, 552]
-    my_new_dict = {n: n ** 2 for n in my_numbers2 if n % 2 == 0}
-    print(my_new_dict)
+    my_new_dict2 = {n: n ** 2 for n in my_numbers2 if n % 2 == 0}
+    print(my_new_dict2)
+
+    my_numbers2 = [233, 255, 552, 553, 231]
+    my_new_dict3 = {n: n ** 2 for n in my_numbers2 if n in range(233, 553)}
+    print(my_new_dict3)
 
 
 if __name__ == '__main__':
