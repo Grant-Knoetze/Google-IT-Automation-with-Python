@@ -14,7 +14,7 @@ def hello_message_decorator(func):
     return wrapper
 
 
-@hello_message_decorator
+
 def hello_message():
     """This is the hello message function
     Using the @ decorator, control is passed to
