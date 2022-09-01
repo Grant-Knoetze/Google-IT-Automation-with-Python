@@ -9,12 +9,13 @@ def hello_message_decorator(func):
     def wrapper():
         """This is wrapper inside hello
         message decorator"""
-
+        msg = func()
+        print("Called from another function:", msg)
         return ">>>>>> Wrapper: Hello! <<<<<<"
     return wrapper
 
 
-
+@hello_message_decorator
 def hello_message():
     """This is the hello message function
     Using the @ decorator, control is passed to
