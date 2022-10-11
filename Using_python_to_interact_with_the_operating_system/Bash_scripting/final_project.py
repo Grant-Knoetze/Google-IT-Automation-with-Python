@@ -1,11 +1,13 @@
 #!/usr/bin/env/ python3
 import re
-import regex
+import sys
 
 
 def log_errors():
     """Set regular expression to find lines containing ERROR"""
-    with open("syslog.log") as file:
+    errors ={}
+    with open("/var/log/syslog") as file:
         error_log = 0
         for line in file:
-            info = re.findall(r"")
+            info = re.findall(r"(?P<logtype>ERROR)", line)
+            errors.append(info)
