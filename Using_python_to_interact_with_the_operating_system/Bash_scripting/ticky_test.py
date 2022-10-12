@@ -8,13 +8,14 @@ dict_per_usr = {}
 user_count = []
 
 
-def log_errors():
+def open_file():
     """Set regular expression to find lines containing ERROR"""
+    with open(log_file) as file:
+        data = file.readlines()
+    return data
 
 
-with open(log_file) as file:
-    for line in file:
-        info = re.findall(r"ticky: (?P<logtype>INFO|ERROR)", line)
+pattern_error = re.search(r"ticky: ERROR ([\w ]*)", line)
 
 print(log_errors())
 
