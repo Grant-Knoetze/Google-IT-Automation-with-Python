@@ -1,3 +1,5 @@
+import csv
+import operator
 import re
 import sys
 
@@ -8,6 +10,6 @@ def log_errors():
 
 with open("/var/log/syslog") as file:
     for line in file:
-        info = re.findall(r"(?P<logtype>ERROR)", line)
+        info = re.findall(r"ticky: (?P<logtype>INFO|ERROR)", line)
 
 print(log_errors())
