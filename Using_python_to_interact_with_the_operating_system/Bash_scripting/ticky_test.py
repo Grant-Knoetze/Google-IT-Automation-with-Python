@@ -22,6 +22,13 @@ def generate_dict(data_lines):
         pattern_error = re.search(r"ticky: ERROR ([\w ]*)", line)
         pattern_user = re.search(r"\(([\w\. ]*)\)", line)
 
+        # generate dict_errors dictionary
+        if pattern_error != None:
+            if pattern_error.group(1) not in dict_errors.keys():
+                dict_errors[pattern_error.group(1)] = 1
+            else:
+                dict_errors[pattern_error.group(1)] += 1
+
 
 print(log_errors())
 
