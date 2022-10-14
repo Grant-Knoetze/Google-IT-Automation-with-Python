@@ -4,7 +4,7 @@ import re
 import sys
 
 dict_errors = {}
-dict_per_usr = {}
+dict_per_user = {}
 user_count = []
 
 
@@ -28,9 +28,25 @@ def generate_dict(data_lines):
                 dict_errors[pattern_error.group(1)] = 1
             else:
                 dict_errors[pattern_error.group(1)] += 1
+            # Generate per_user dictionary
+            if pattern_user != None:
+                if pattern_user.group(1) not in dict_per_user.keys():
+                    dict_per_user[pattern_user.group(1)] = {}
+                    dict_per_user[pattern_user.group(1)]["INFO"] = 0
+                    dict_per_user[pattern_user.group(1)]["ERROR"] = 0
+                    # Count elements for each user
+                    if pattern_error != None:
+                        dict_per_user[pattern_user.group(1)]["ERROR"] = 1
+                    else:
+                        dict_per_user[pattern_user.group(1)]["INFO"] = 1
+            else:
+                if pattern_user != None:
+                    dict_per_user[pattern_user.group(1)]["ERROR"] += 1
+                else:
+                    dict_per_user[pattern_user.group(1)]["INFO"] += 1
 
 
-print(log_errors())
+print(dict_per_user)
 
 
 def main():
