@@ -45,8 +45,18 @@ def generate_dict(data_lines):
                 else:
                     dict_per_user[pattern_user.group(1)]["INFO"] += 1
 
-
-print(dict_per_user)
+        # Sort the dictionaries
+        errors_list = sorted(dict_errors.items(), key=operator.itemgetter(1),
+                             reverse=True)
+        # Insert the header of the table at the beginning
+        errors_list.insert(0, ('Error', 'Count'))
+        print("\nERRORS Dictionary::::::::::\n")
+        print(errors_list)
+        print("\nUsers Dictionary:::::::::::\n")
+        per_user_list = sorted(dict_per_user.items(), key=operator.itemgetter(0))
+        # Insert the header of the table at the beginning
+        per_user_list.insert(0, ('Username', {'INFO', 'ERROR'}))
+        print(per_user_list)
 
 
 def main():
