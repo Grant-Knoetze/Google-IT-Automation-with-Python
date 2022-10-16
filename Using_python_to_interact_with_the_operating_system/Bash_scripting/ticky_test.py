@@ -79,6 +79,8 @@ def generate_dict(data_lines):
 def main():
 
     log_file = sys.argv[1]
+    data_lines = open_file(log_file)
+    generate_dict(data_lines)
 
 
 if __name__ == "__main__":
