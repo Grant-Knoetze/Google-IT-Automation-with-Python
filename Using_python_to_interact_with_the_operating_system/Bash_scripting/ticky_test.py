@@ -58,6 +58,13 @@ def generate_dict(data_lines):
         per_user_list.insert(0, ('Username', {'INFO', 'ERROR'}))
         print(per_user_list)
 
+        # Write errors to csv file
+        with open("error_message_csv", "w") as f:
+            writer = csv.writer(f)
+            for key, value in errors_list:
+                writer.writerow([key, value])
+                
+
 
 def main():
     log_file = sys.argv[1]
