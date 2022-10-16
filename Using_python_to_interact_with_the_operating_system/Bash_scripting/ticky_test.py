@@ -63,10 +63,21 @@ def generate_dict(data_lines):
             writer = csv.writer(f)
             for key, value in errors_list:
                 writer.writerow([key, value])
-                
+
+        # Write per_user csv file:
+        with open("user_statistics.csv", "w") as f2:
+            writer = csv.writer(f2)
+            for i, key in per_user_list:
+                if i != "Username":
+                    for j, x in key.items():
+                        if len(user_count) == 2:
+                            user_count.clear()
+                            user_count.append(x)
+                    writer.writerow([i, user_count[0], user_count[1]])
 
 
 def main():
+
     log_file = sys.argv[1]
 
 
