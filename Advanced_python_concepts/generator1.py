@@ -2,8 +2,8 @@
 # Define a simple function first...s
 def a_plus_b(a, b):
     result = a + b
-    return result
+    yield result
 
 
 x = a_plus_b(4, 4)
-print(x)
+print(x.__next__())
