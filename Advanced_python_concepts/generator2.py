@@ -6,6 +6,10 @@ def square_numbers(n):
 
 
 x = square_numbers(5)
-print(x.__next__())
-print(x.__next__())
-print(x.__next__())
+
+for num in x:
+    print(num)
+    
+#print(x.__next__())
+#print(x.__next__())
+#print(x.__next__())
