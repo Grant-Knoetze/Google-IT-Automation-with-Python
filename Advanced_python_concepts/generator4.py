@@ -7,7 +7,7 @@ def get_odd_numbers_squared_and_ending_in_1():
         if n % 2 != 0:
             n **= 2
             if n % 10 == 1:
-                print("Match found ---->{}".format(n))
+                print("Match found ---->{}".format(str(n)))
 
 
 get_odd_numbers_squared_and_ending_in_1()
