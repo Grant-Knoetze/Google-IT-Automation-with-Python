@@ -14,8 +14,14 @@ def square(nums):
         yield num
 
 
+def create_strings(nums):
+    """Create strings"""
+    for num in nums:
+        yield "The string value is-------->{}".format(str(num))
+
+
 # Generator pipeline takes odd_filter function
-generator_pipeline = square(odd_filter(range(1000)))
+generator_pipeline = create_strings(square(odd_filter(range(1000))))
 
 for n in generator_pipeline:
     print(n)
