@@ -11,3 +11,17 @@ def get_odd_numbers_squared_and_ending_in_1():
 
 
 get_odd_numbers_squared_and_ending_in_1()
+
+# Expand on the above function, separate into functional units as generators.
+
+block = range(1000)
+
+
+def square():
+    """Square the number if odd and yield the result"""
+    for n in range:
+        yield n ** 2
+    return result
+
+
+
